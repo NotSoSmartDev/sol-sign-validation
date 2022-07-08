@@ -3,7 +3,7 @@ import * as web3 from "@solana/web3.js"
 import bs58 from "bs58"
 
 
-async function handler(req, res) {
+export default async function handler(req, res) {
   const { message, signature, publicKey } = req.body
 
   const isSigned = sign.detached.verify(
